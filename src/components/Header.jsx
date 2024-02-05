@@ -9,7 +9,7 @@ import { colors } from '../global/color';
 const Header =({})=>{
     return(
     <View style={styles.header}>
-        <Text>CARRITO</Text>
+        <Text style={styles.textHeader}>CARRITO</Text>
         <Image
           style={styles.image}
          source={cartIcon}
@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 8,
     alignItems: "center",
-    backgroundColor:colors.blue_200,
+    backgroundColor:colors.blue_300,
   },
     image: {
     width: 50,
     height: 50,
   },
-  
+  textHeader:{color:'#ffff', fontSize:20}
 });

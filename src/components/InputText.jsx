@@ -2,12 +2,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   TextInput,
-  TouchableOpacity,
   Pressable,
-  FlatList,
-  Modal,
 } from "react-native";
 
 const InputText =({onChangeText, value, placeholder, addItem})=>{

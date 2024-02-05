@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, Pressable, Modal} from 'react-native';
  
  const RemoveModal=({
   modalVisible,
-  setCartItems,
   setModalVisible,
   removeItem
  })=>{
@@ -11,12 +10,12 @@ import { StyleSheet, Text, View, Pressable, Modal} from 'react-native';
   <Modal visible={modalVisible}  animationType="slide"
         transparent >
     <View style={styles.modalContainer}>
-      <Text>Queres Eliminar el producto?</Text>
+      <Text style={styles.modalText}>Queres eliminar el producto?</Text>
       <Pressable onPress={()=>setModalVisible(false)}>
-      <Text>No</Text>
+      <Text style={styles.modalText}>No</Text>
       </Pressable>
        <Pressable onPress={removeItem}>
-      <Text>Si</Text>
+      <Text style={styles.modalText}>Si</Text>
       </Pressable>
     </View>
   </Modal>
@@ -42,4 +41,7 @@ import { StyleSheet, Text, View, Pressable, Modal} from 'react-native';
     shadowRadius: 4,
     elevation: 5,
   },
+  modalText:{
+    fontWeight:"bold"
+  }
 });
